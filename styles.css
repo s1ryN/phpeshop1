@@ -1,0 +1,223 @@
+/* Globální styly */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7fafc; /* bg-gray-50 */
+}
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem; /* p-4 */
+}
+.text-xl { font-size: 1.25rem; }
+.font-semibold { font-weight: 600; }
+.flex.space-x-4 > * + * {
+    margin-left: 8px;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover { color: #4a5568; /* hover:text-gray-700 */ }
+input[type="search"] {
+    padding: 0.25rem 1rem; /* px-2 py-1 */
+    border: 1px solid #cbd5e0; /* border-gray-300 */
+    border-radius: 0.25rem; /* rounded */
+    margin-left: auto;
+}
+main {
+    padding: 1rem; /* p-4 */
+}
+h2 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 0.5rem;
+}
+p {
+    color: #4a5568; /* text-gray-700 */
+}
+.grid-container {
+    display: grid;
+    width: 100%; /* nastaví šířku kontejneru na 100% */
+    grid-template-columns: 1fr; /* každý produktový blok zabere celou šířku */
+    gap: 1rem;
+}
+.grid-cell {
+    background-color: #edf2f7; /* bg-gray-200 */
+    padding: 1rem;
+    border-radius: 0.25rem; /* rounded */
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.product-image {
+    width: 20%;
+    float: left;
+    margin-right: 10px;
+}
+.product-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    height: 60%;
+}
+.product-title { font-size: 1.2em; margin-bottom: 3px; }
+.product-description {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 100%;
+    text-align: center;
+    margin-top: 10px; /* Odstranění horního okraje */
+}
+.product-additional-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+.cart-summary {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+}
+
+.cart-summary h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5rem;
+}
+
+.cart-summary p {
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+}
+
+.cart-summary .price {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.cart-summary .price-value {
+    float: right;
+}
+.quantity-selector {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-decrease,
+.quantity-increase {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #4299e1; /* bg-blue-500 */
+    color: white;
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    border: none;
+    border-radius: 0.25rem; /* rounded */
+    cursor: pointer;
+    font-weight: bold; /* font-bold */
+}
+button:hover {
+    background-color: #2b6cb0; /* hover:bg-blue-700 */
+}
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #cbd5e0;
+    border-radius: 0.25rem;
+}
+#contact-form button {
+    background-color: #4299e1;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+#contact-form button:hover {
+    background-color: #2b6cb0;
+}
+
+
+/* Styly pro stránku checkout */
+.checkout-title {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.checkout-form {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.checkout-form h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.75rem;
+}
+
+.checkout-form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.submit-order {
+    background-color: #4299e1;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 1rem;
+    display: block; /* or 'inline-block' if you prefer */
+    width: 100%; /* for full width button */
+}
+
+.submit-order:hover {
+    background-color: #2b6cb0;
+}
